@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "../styles/variables";
+@import "../styles/mixins";
+
+:root {
+  /* Default to Dark Mode colors for that premium feel */
+  --background: #0f172a; /* Slate 900 */
+  --foreground: #f8fafc; /* Slate 50 */
+  --card-bg: #1e293b; /* Slate 800 */
+  --primary: #10b981; /* Emerald 500 */
+  --primary-hover: #059669; /* Emerald 600 */
+  --accent: #38bdf8; /* Sky 400 */
+  --muted: #94a3b8; /* Slate 400 */
+  --border: #334155; /* Slate 700 */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Force Dark Mode styles regardless of system preference for now, 
+   or we can stick to media query if strictly needed. 
+   But the user requested "Pages theme should be dark". */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.news-blog {
+h1{
+  font-size: 24px !important;
+  font-weight: bold;
+}
+h2{
+  font-size: 20px !important;
+  font-weight: bold;
+}        
+h3{
+  font-size: 16px !important;
+}
+li{
+  font-size: 14px !important;
+}
+p{
+  padding-top: 10px !important;
+  font-size: 14px !important;
+}
+}
