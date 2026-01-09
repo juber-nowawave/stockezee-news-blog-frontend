@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import SearchBar from '../components/SearchBar';
-import NewsCard from '../components/NewsCard';
-import Footer from '../components/Footer';
-import { getNews } from '../lib/api';
+import Navbar from '../../components/Navbar';
+import SearchBar from '../../components/SearchBar';
+import NewsCard from '../../components/NewsCard';
+import Footer from '../../components/Footer';
+import { getNews } from '../../lib/api';
 
 export default function Home() {
   const [allNews, setAllNews] = useState([]);
