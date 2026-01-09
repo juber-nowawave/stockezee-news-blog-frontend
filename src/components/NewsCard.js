@@ -12,7 +12,7 @@ const NewsCard = ({ news }) => {
         <div className="relative h-48 w-full overflow-hidden">
           <Image
             src={
-              news.image ||
+              news.news_image ||
               "https://img.etimg.com/thumb/msid-126364006,width-160,height-120,imgsize-78500/oil-falls-on-prospect-of-higher-venezuelan-output-ample-supply-outlook.jpg"
             }
             alt={news.title}

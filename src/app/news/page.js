@@ -60,7 +60,7 @@ export default function Home() {
                 <span className="w-2 h-8 bg-primary rounded-full"></span>
                 Latest News
             </h2>
-          
+
           {loading ? (
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                  {[...Array(6)].map((_, i) => (

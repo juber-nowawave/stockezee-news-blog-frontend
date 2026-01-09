@@ -97,7 +97,7 @@ export default function NewsDetail({ params }) {
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                         <Calendar size={16} />
-                        {news.date}
+                        {news.created_at}
                     </div>
                 </div>
                 
@@ -109,7 +109,7 @@ export default function NewsDetail({ params }) {
 
           <div className="relative w-full h-[400px] md:h-[500px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src={news.image} 
+              src={news.news_image} 
               alt={news.title}
               fill
               className="object-cover"
@@ -118,8 +118,11 @@ export default function NewsDetail({ params }) {
           </div>
 
           <div className="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed">
-             <p className="text-xl text-foreground font-semibold mb-8 border-l-4 border-primary pl-4">
-                 {news.summary}
+             <p className="text-xl text-foreground mb-8 border-l-4 border-primary pl-4">
+                 <b>META TITLE: </b> {news.meta_title}
+             </p>
+             <p className="text-xl text-foreground mb-8 border-l-4 border-primary pl-4">
+                 <b>META DESCRIPTION: </b> {news.meta_description}
              </p>
              {/* Simulating rich text content */}
              <div className="space-y-6 news-blog">
