@@ -24,8 +24,6 @@ export default function NewsDetail({ params }) {
            // Handle not found usually by redirecting or showing error
            // logic can be improved
         }
-        console.log('----------->>>',data);
-        
         setNews(data);
       } catch (error) {
         console.error("Failed to fetch news detail:", error);
@@ -109,7 +107,7 @@ export default function NewsDetail({ params }) {
 
           <div className="relative w-full h-[400px] md:h-[500px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src={news.news_image} 
+              src={news.ai_image} 
               alt={news.title}
               fill
               className="object-cover"
